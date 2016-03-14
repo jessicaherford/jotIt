@@ -40,6 +40,15 @@ serve.listen(app.get('port'), function() {
  * Normalize a port into a number, string, or false.
  */
 
+ io.on('connection', function (socket) {
+     console.log('a user connected');
+    //  socket.on('disconnect', function () {
+    //     console.log('user disconnected');
+    // });
+ });
+
+
+
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
