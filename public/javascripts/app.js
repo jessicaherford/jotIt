@@ -6,8 +6,16 @@ app.config(function($routeProvider) {
         templateUrl: '/partials/splash.html',
         controller: 'MainController'
       })
-      .when('/board', {
-        templateUrl: '/partials/board.html',
+      .when('/users', {
+        templateUrl: '/partials/users.html',
+        controller: 'MainController'
+      })
+      .when('/boards', {
+        templateUrl: '/partials/boards.html',
+        controller: 'MainController'
+      })
+      .when('/notes', {
+        templateUrl: '/partials/notes.html',
         controller: 'MainController'
       })
 });

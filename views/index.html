@@ -2,17 +2,43 @@
 <html ng-app='jotIt'>
   <head>
     <title>Jot It</title>
+    <!-- jQuery, jQuery.ui -->
+    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- React -->
+    <script src="https://fb.me/react-0.13.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
   </head>
   <body>
-    <h1>Jot It</h1>
-    <p>Welcome to Jot It</p>
+  <nav class="navbar-custom navbar-default" id='navHeader'>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand glyphicon glyphicon-edit" href="/#/users">jot/it</a>
+      </div>
+        <!-- <ul class="nav navbar-nav">
+          <li><a href="/#">Home</a></li>
+        </ul> -->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/#/users">Log In</a></li>
+          <li><a href="/#/">Log Out</a></li>
+        </ul>
+    </div>
+  </nav>
     <div ng-view></div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
     <script type="text/javascript" src='javascripts/app.js'></script>
     <script type="text/javascript"src='javascripts/controllers/main_controller.js'></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="javascripts/Note.js" type="text/babel" ></script>
     <script>
       var socket = io();
     </script>
