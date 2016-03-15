@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='jotIt'>
   <head>
     <title>Jot It</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -7,6 +7,11 @@
   <body>
     <h1>Jot It</h1>
     <p>Welcome to Jot It</p>
+    <div ng-view></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+    <script type="text/javascript" src='javascripts/app.js'></script>
+    <script type="text/javascript"src='javascripts/controllers/main_controller.js'></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
