@@ -1,8 +1,140 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+*{
+  font-family: "Shadows Into Light", Arial;
 }
 
-a {
-  color: #00B7FF;
+body,
+html,
+div.board,
+div#react-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.note {
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+    margin: 2px 0;
+    position: absolute;
+    cursor: -webkit-grab;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+}
+
+div.note:active {
+    cursor: -webkit-grabbing;
+}
+
+div.note p {
+    font-size: 22px;
+    padding: 5px;
+    font-family: "Shadows Into Light", Arial;
+}
+
+div.note:hover > span {
+    opacity: 1;
+}
+
+div.note > span {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    opacity: 0;
+    transition: opacity .25s linear;
+}
+
+div.note button {
+    margin: 2px;
+}
+
+div.note > textarea {
+    height: 75%;
+    background: rgba(255, 255, 255, .5);
+}
+
+/*.glyphicon-plus {
+    position: absolute;
+    top: 9.5vh;
+    right: 89.5vw;
+}*/
+
+.splash{
+  border: 1px solid #777777;
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  opacity: .8;
+}
+
+.caption {
+    position: absolute;
+    top: 22vh;
+    left: 38vw;
+    width: 25vw;
+}
+
+/*.buttoni{
+  width: 100px;
+  position: absolute;
+  left: 6vw;
+}*/
+
+.textBoxes1{
+  margin-top: 10px;
+  -webkit-transform:rotate(-6deg);
+}
+
+.textBoxes2{
+  margin-top: 20px;
+  -webkit-transform:rotate(6deg);
+}
+
+.textBoxes3{
+  margin-top: 10px;
+  -webkit-transform:rotate(-6deg);
+}
+
+.texts1{
+  height: 30vh;
+  width: 20vw;
+  background-color: #FED533;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.texts2{
+  height: 30vh;
+  width: 20vw;
+  background-color: #33D6E4;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.texts3{
+  height: 30vh;
+  width: 20vw;
+  background-color: #E379D7;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.noteHeader{
+  text-align: center;
+  position: relative;
+  bottom: 80vh;
+  left: 40vw;
+  width: 15vw;
+}
+
+.noteBoard{
+  width: 100vw;
+  height: 90vh;
+  margin-top: 20px;
 }
