@@ -1,4 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+*{
+  font-family: "Shadows Into Light", Arial;
+}
+
 body,
 html,
 div.board,
@@ -69,17 +73,38 @@ div.note > textarea {
 
 .caption {
     position: absolute;
-    top: 14%;
-    left: 37%;
-    width: 100%;
+    top: 22vh;
+    left: 38vw;
+    width: 25vw;
 }
+
+/*.buttoni{
+  width: 100px;
+  position: absolute;
+  left: 6vw;
+}*/
 
 .textBoxes{
   margin-top: 20px;
 }
 
-.texts{
-  border: 1px solid black;
+.texts1{
+  background-color: #FED533;
   border-radius: 5px;
   padding: 10px;
+  font-size: 23px;
+}
+
+.texts2{
+  background-color: #33D6E4;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 23px;
+}
+
+.texts3{
+  background-color: #E379D7;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 23px;
 }
