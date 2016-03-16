@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
 *{
   font-family: "Shadows Into Light", Arial;
 }
@@ -59,12 +60,13 @@ div.note > textarea {
 }
 
 /*.glyphicon-plus {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    position: absolute;
+    top: 9.5vh;
+    right: 89.5vw;
 }*/
 
 .splash{
+  border: 1px solid #777777;
   position: relative;
   width: 100vw;
   height: 60vh;
@@ -84,27 +86,55 @@ div.note > textarea {
   left: 6vw;
 }*/
 
-.textBoxes{
+.textBoxes1{
+  margin-top: 10px;
+  -webkit-transform:rotate(-6deg);
+}
+
+.textBoxes2{
   margin-top: 20px;
+  -webkit-transform:rotate(6deg);
+}
+
+.textBoxes3{
+  margin-top: 10px;
+  -webkit-transform:rotate(-6deg);
 }
 
 .texts1{
+  height: 30vh;
+  width: 20vw;
   background-color: #FED533;
-  border-radius: 5px;
   padding: 10px;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .texts2{
+  height: 30vh;
+  width: 20vw;
   background-color: #33D6E4;
-  border-radius: 5px;
   padding: 10px;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .texts3{
+  height: 30vh;
+  width: 20vw;
   background-color: #E379D7;
-  border-radius: 5px;
   padding: 10px;
-  font-size: 23px;
+  font-size: 20px;
+}
+
+.noteHeader{
+  text-align: center;
+  position: relative;
+  bottom: 80vh;
+  left: 40vw;
+  width: 15vw;
+}
+
+.noteBoard{
+  width: 100vw;
+  height: 90vh;
+  margin-top: 20px;
 }
