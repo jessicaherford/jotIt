@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "post": [
+      {
+        "user_id": 1,
+        "timestamps": true,
+        "text": "A school for wizards?? Discuss."
+      }
+    ],
+    "timestamps": true
+  },
+  {
+    "title": "The Hobbit",
+    "post": [
+      {
+        "user_id": 2,
+        "timestamps": true,
+        "text": "Hobbits...adorable or not? Discuss."
+      }
+    ],
+    "timestamps": true
+  },
+  {
+    "title": "Pride and Prejudice",
+    "post": [
+      {
+        "user_id": 3,
+        "timestamps": true,
+        "text": "Are you pride or prejudice? Discuss."
+      }
+    ],
+    "timestamps": true
+  },
+  {
+    "title": "Wuthering Heights",
+    "post": [
+      {
+        "user_id": 4,
+        "timestamps": true,
+        "text": "Are you afraid of heights? Discuss."
+      }
+    ],
+    "timestamps": true
+  },
+  {
+    "title": "The Graveyard Book",
+    "post": [
+      {
+        "user_id": 5,
+        "timestamps": true,
+        "text": "Ghosts...scary or no? Discuss."
+      }
+    ],
+    "timestamps": true
+  }
+]

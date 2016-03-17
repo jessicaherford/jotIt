@@ -1,0 +1,23 @@
+<h1>BOARD PAGE</h1>
+
+<div class="well" ng-repeat='board in boards'>
+  <p>
+    {{board.title}}
+  </p>
+</div>
+
+
+<div class="container">
+  <form ng-submit='addBoard()'>
+    <fieldset class="fnew">
+      <legend>Create Board</legend>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" ng-model='board.title' placeholder="Book Title" name="title" class="form-control"/>
+      </div>
+      <div class="buttons">
+        <button type="submit" class="btn btn-primary">Submit Board</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
