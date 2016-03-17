@@ -1,3 +1,7 @@
+app.controller("SplashController", ['$scope', '$http', function($scope, $http, BoardService){
+   // no instance variables here....
+}]);
+
 app.controller("MainController", ['$scope', '$http', 'BoardsService', function ($scope, $http, BoardsService) {
   BoardsService.all().then(function (boards) {
     $scope.boards = boards.data;
@@ -23,7 +27,7 @@ app.controller("BoardShowController", function($scope, BoardsService, $routePara
   the_id = $routeParams.id;
   console.log("my params are "+the_id);
   BoardsService.getBoard(the_id).then(function(payload){
-    console.log("we are getting ONE board named: "+payload.data.title);
+    console.log("we are getting ONE board named: "+payload.data.post.text);
     $scope.singleBoard = payload.data;
   }, function(error){
     console.log("an error occurred");

@@ -7,6 +7,7 @@ var Board = require('../models/board_model');
 
 router.get('/', function (req, res, next) {
   Board.find().then(function (boards) {
+    console.log(boards);
     res.json(boards);
   });
 });

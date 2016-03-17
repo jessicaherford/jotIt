@@ -49,13 +49,16 @@
     </div>
 </div>
 
-<div class="well col-xs-4" ng-repeat='board in boards'>
-  <a href="/boards/{{board._id}}">
-    <p>
-      {{board.title}}
-    </p>
-  </a>
+<div class="boardContainer">
+  <div class="boardWell col-xs-4" ng-repeat='board in boards'>
+    <a href="/boards/{{board._id}}">
+      <p>
+        {{board.title}}
+      </p>
+    </a>
+  </div>
 </div>
+
 <script>
   var socket = io();
 </script>
