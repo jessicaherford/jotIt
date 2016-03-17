@@ -15,6 +15,8 @@ var notes = require('./routes/notes');
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
