@@ -14,7 +14,6 @@ router.get('/', function (req, res, next) {
 router.get("/:id", function(req,res){
   Board.findOne({_id: req.params.id}).then(function(payload){
     res.json(payload);
-    console.log(payload);
   });
 });
 

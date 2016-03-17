@@ -1,15 +1,15 @@
 app.factory('BoardsService', ['$http', function ($http) {
   return {
     all: function () {
-      return $http.get('/boards');
+      return $http.get("http://localhost:3000/boards", {method: "jsponp"});
     },
 
     getBoard: function (board_id) {
-      return $http.get('/boards/'+board_id);
+      return $http.get("http://localhost:3000/boards/"+board_id);
     },
 
     addBoard: function (newBoard) {
-      return $http.post('/boards', newBoard);
+      return $http.post("http://localhost:3000/boards", newBoard);
     },
 
 
