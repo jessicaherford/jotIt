@@ -9,9 +9,8 @@ var mongoose = require('mongoose');
 var db = require('./config/db');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var boards = require('./routes/boards');
-var notes = require('./routes/notes');
+
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = express();
@@ -38,9 +37,7 @@ if(env === 'development'){
 }
 
 app.use('/', routes);
-app.use('/api', users);
 app.use('/api', boards);
-app.use('/api', notes);
 
 //CORS thingy
 app.use(function(req, res, next) {
