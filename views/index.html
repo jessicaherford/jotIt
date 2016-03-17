@@ -17,25 +17,29 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <base href="/">
   <nav class="navbar-custom navbar-default" id='navHeader'>
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand glyphicon glyphicon-edit" href="/#/users">jot/it</a>
+        <a class="navbar-brand glyphicon glyphicon-edit" href="/users">jot/it</a>
       </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a class='glyphicon glyphicon-log-in' href="/#/users" id='loginButton'>/log/in</a></li>
-          <li><a class='glyphicon glyphicon-log-out' href="/#/">/log/out</a></li>
+          <li><a class='glyphicon glyphicon-log-in' href="/users">/log/in</a></li>
+          <li><a class='glyphicon glyphicon-log-out' href="/">/log/out</a></li>
         </ul>
     </div>
   </nav>
     <div ng-view></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
-    <script type="text/javascript" src='javascripts/app.js'></script>
-    <script type="text/javascript"src='javascripts/controllers/main_controller.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-resource.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.js"></script>
+    <script type="text/javascript" src='/javascripts/app.js'></script>
+    <script type="text/javascript" src='/javascripts/services/boards_service.js'></script>
+    <script type="text/javascript"src='javascripts/controllers/main_controller.js'></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="javascripts/Note.js" type="text/babel" ></script>
+    <script src="/javascripts/Note.js" type="text/babel" ></script>
     <script>
       var socket = io.connect();
     </script>
