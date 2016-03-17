@@ -49,9 +49,11 @@
 </div>
 
 <div class="well col-xs-4" ng-repeat='board in boards'>
-  <p>
-    {{board.title}}
-  </p>
+  <a href="/boards/{{board._id}}/notes">
+    <p>
+      {{board.title}}
+    </p>
+  </a>
 </div>
 <script>
   var socket = io();

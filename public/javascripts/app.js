@@ -14,7 +14,7 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '/partials/boards.html',
         controller: 'MainController'
       })
-      .when('/notes', {
+      .when('/boards/:id/notes', {
         templateUrl: '/partials/notes.html',
         controller: 'MainController'
       })
