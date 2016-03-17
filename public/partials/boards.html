@@ -1,1 +1,29 @@
 <h1>BOARD PAGE</h1>
+<div class="boardContainer">
+  <div class="row text-center">
+    <a href="/boards" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Create a board</a>
+  </div>
+  <hr>
+</div>
+
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Create a board!</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <form ng-submit='newStory()' class="form-horizontal">
+            <label for="name">Name</label><br/>
+            <input type="text" id="name" placeholder="Board Name" name="name" class="form-control"/>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Create board</button>
+      </div>
+    </div>
+  </div>
+</div>
