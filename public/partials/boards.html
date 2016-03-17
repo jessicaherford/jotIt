@@ -1,9 +1,10 @@
-<h1>BOARD PAGE</h1>
 <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
-    Launch Normal Form
+<button class="boardButton btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+    Create A Board
 </button>
-
+<br>
+<br>
+<br>
 <!-- Modal -->
 <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
@@ -47,7 +48,7 @@
     </div>
 </div>
 
-<div class="well" ng-repeat='board in boards'>
+<div class="well col-xs-4" ng-repeat='board in boards'>
   <p>
     {{board.title}}
   </p>

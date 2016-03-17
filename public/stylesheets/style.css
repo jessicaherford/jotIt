@@ -135,3 +135,7 @@ div.note > textarea {
   width: 100vw;
   height: 90vh;
 }
+
+.boardButton{
+  margin: 0 auto;
+}
