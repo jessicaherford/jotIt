@@ -12,7 +12,6 @@ app.factory('BoardsService', ['$http', function ($http) {
       return $http.post('/boards', newBoard);
     },
 
-
   }
 }])
 
