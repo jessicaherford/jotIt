@@ -18,9 +18,5 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '/partials/notes.html',
         controller: 'BoardShowController'
       })
-      // .when('/boards/:id', {
-      //   templateUrl: 'partials/notes.html',
-      //   controller: 'CatController'
-      // })
     $locationProvider.html5Mode(true);
 });
