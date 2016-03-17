@@ -4,11 +4,7 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: '/partials/splash.html',
-        controller: 'MainController'
-      })
-      .when('/users', {
-        templateUrl: '/partials/users.html',
-        controller: 'MainController'
+        controller: 'SplashController'
       })
       .when('/boards', {
         templateUrl: '/partials/boards.html',
