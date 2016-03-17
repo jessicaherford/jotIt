@@ -36,6 +36,11 @@ app.controller("BoardShowController", function($scope, BoardsService, $routePara
 
 app.controller("ChatController", function($scope){
   console.log("Made It with the Chat Controller");
+  $scope.chatMessages = {};
+  $scope.addChat = function(){
+    var chat = $scope.chat;
+    
+  }
 })
 
 // app.controller("PostController", ['$scope', 'BoardsService', function ($scope, BoardsService) {
