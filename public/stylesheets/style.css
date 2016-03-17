@@ -159,3 +159,7 @@ h3{
 }
 
 /*chat styles*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
