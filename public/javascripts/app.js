@@ -14,6 +14,11 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '/partials/notes.html',
         controller: 'BoardShowController'
       })
+      .when('/chatroom', {
+        templateUrl: '/partials/chatroom.html',
+        controller: 'ChatController'
+      })
+
       // .when('/boards/:id', {
       //   templateUrl: 'partials/notes.html',
       //   controller: 'CatController'

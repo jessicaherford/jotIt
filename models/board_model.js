@@ -24,5 +24,6 @@ var boardSchema = new Schema({
 
 var Board = mongoose.model('boards', boardSchema);
 
+
 // export our board model
 module.exports = Board;
