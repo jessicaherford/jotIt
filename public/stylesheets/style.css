@@ -4,12 +4,9 @@
   font-family: "Shadows Into Light", Arial;
 }
 
-body,
-html,
 div.board,
 div#react-container {
     height: 100%;
-    overflow: hidden;
 }
 
 body {
@@ -70,7 +67,7 @@ div.note > textarea {
   border: 1px solid #777777;
   position: relative;
   width: 100vw;
-  height: 60vh;
+  height: 55vh;
   opacity: .8;
 }
 
@@ -88,17 +85,17 @@ div.note > textarea {
 }*/
 
 .textBoxes1{
-  margin-top: 10px;
+  margin-top: 20px;
   -webkit-transform:rotate(-6deg);
 }
 
 .textBoxes2{
-  margin-top: 20px;
+  margin-top: 30px;
   -webkit-transform:rotate(6deg);
 }
 
 .textBoxes3{
-  margin-top: 10px;
+  margin-top: 20px;
   -webkit-transform:rotate(-6deg);
 }
 
@@ -137,5 +134,4 @@ div.note > textarea {
 .noteBoard{
   width: 100vw;
   height: 90vh;
-  margin-top: 20px;
 }
