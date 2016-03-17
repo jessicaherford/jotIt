@@ -34,14 +34,40 @@ app.controller("BoardShowController", function($scope, BoardsService, $routePara
   });
 });
 
-app.controller("ChatController", function($scope){
-  console.log("Made It with the Chat Controller");
-  $scope.chatMessages = {};
-  $scope.addChat = function(){
-    var chat = $scope.chat;
-    
+app.controller("ChatController", function($scope) {
+  $scope.chatMessages = [];
+
+  $scope.formatChat = function(icon,username,text,origDt) {
+    var chat = {};
+    chat.icon = icon;
+    chat.username = username;
+    chat.text = text;
+    chat.origDt = origDt;
+    return chat;
   }
-})
+
+  $scope.addChat = function() {
+    if ($scope.newChatMsg != "") {
+      var chat = $scope.formatChat("http://placehold.it/16x16",
+                           "steve",
+                           $scope.newChatMsg,
+                           new Date());
+
+      $scope.chatMessages.push(chat);
+      $scope.newChatMsg = "";
+    }
+    else {
+
+    }
+  }
+
+});
+
+app.filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse();
+  };
+});
 
 // app.controller("PostController", ['$scope', 'BoardsService', function ($scope, BoardsService) {
 
