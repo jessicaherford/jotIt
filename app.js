@@ -4,10 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+var db = require('./config/db');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var boards = require('./routes/boards');
+var notes = require('./routes/notes');
 
 var app = express();
 
@@ -27,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/boards', boards);
+app.use('/notes', notes);
 
 //CORS thingy
 app.use(function(req, res, next) {

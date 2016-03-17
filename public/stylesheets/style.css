@@ -13,6 +13,7 @@ div#react-container {
 }
 
 body {
+    overflow-y: auto;
     margin: 0;
     padding: 0;
 }

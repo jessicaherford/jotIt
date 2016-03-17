@@ -1,7 +1,9 @@
+// grab the mongoose module
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/boards_development');
 
+// define our board model
 var boardSchema = new Schema({
   title: String,
   post: [
@@ -16,6 +18,7 @@ var boardSchema = new Schema({
   updated_at: Date
 });
 
-var Board = mongoose.model('Board', boardSchema);
+var Board = mongoose.model('boards', boardSchema);
 
+// export our board model
 module.exports = Board;

@@ -1,5 +1,5 @@
 {
 	"undefined": "localhost/boards_development",
-	"dev": "localhost/DEV_DB_NAME",
+	"dev": "localhost/boards_development",
 	"prod": "localhost/PROD_DB_NAME"
 }
