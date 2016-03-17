@@ -45,6 +45,7 @@ serve.listen(app.get('port'), function() {
  * Normalize a port into a number, string, or false.
  */
 
+//Notes from David
 //on connection listen to
 //emit or on two parts: Event is in a string
 //same way you would name a function 'game over' is var socket.emit('game over', callback function())
@@ -65,14 +66,24 @@ serve.listen(app.get('port'), function() {
 // Everything socket related comes from client
 
 
- io.on('connection', function (socket) {
-     console.log('a user connected');
-     socket.on('disconnect', function () {
-        console.log('user disconnected');
-    });
+
+ io.on('connection', function(socket){
+   console.log('A user connected!');
+   socket.on('chat message', function(msg){
+     io.emit('chat message', msg);
+   });
+   socket.on('disconnect', function(){
+     console.log('user disconnected, buh bye!')
+   })
+ })
+
+
+
+ io.on('connection', function(socket){
+   socket.on('chat message', function(msg){
+     console.log('message: ' + msg);
+   });
  });
-
-
 
 
 function normalizePort(val) {
