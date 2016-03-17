@@ -11,7 +11,7 @@ app.factory('BoardsService', ['$http', function ($http) {
     getNote:function (note_id){
       return $http.get('/api/notes/'+note_id)
     },
-    
+
     addBoard: function (newBoard) {
       return $http.post('/api/boards', newBoard);
     },

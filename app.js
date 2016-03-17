@@ -69,23 +69,6 @@ if (app.get('env') === 'development') {
   });
 }
 
-// app.use(session({
-//   store: new MongoStore({
-//     'db': 'boards_development'
-//   }),
-//   store: new MongoStore({
-//     url: process.env.MONGOLAB_URI
-//   }),app.use(session({
-//   ...
-//   // ===== Following 3 lines are trying to connect to local db =====
-//   store: new MongoStore({
-//     'db': 'boards_development'
-//   }),
-//   // ===== So, I replaced 3 lines above with following =====
-//   store: new MongoStore({
-//     url: process.env.MONGOLAB_URI
-//   }),
-
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
