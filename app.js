@@ -13,6 +13,7 @@ var users = require('./routes/users');
 var boards = require('./routes/boards');
 var notes = require('./routes/notes');
 
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = express();
 
 // view engine setup
@@ -28,6 +29,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+if(env === 'development'){
+  mongoose.connect('mongodb://localhost/boards_development');
+}else{
+  mongoose.connect('mongodb://jess:jotit@ds015939.mlab.com:15939/jotit')
+}
 
 app.use('/', routes);
 app.use('/api', users);
@@ -65,6 +71,23 @@ if (app.get('env') === 'development') {
     });
   });
 }
+
+// app.use(session({
+//   store: new MongoStore({
+//     'db': 'boards_development'
+//   }),
+//   store: new MongoStore({
+//     url: process.env.MONGOLAB_URI
+//   }),app.use(session({
+//   ...
+//   // ===== Following 3 lines are trying to connect to local db =====
+//   store: new MongoStore({
+//     'db': 'boards_development'
+//   }),
+//   // ===== So, I replaced 3 lines above with following =====
+//   store: new MongoStore({
+//     url: process.env.MONGOLAB_URI
+//   }),
 
 // production error handler
 // no stacktraces leaked to user

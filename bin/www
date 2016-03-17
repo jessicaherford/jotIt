@@ -45,6 +45,26 @@ serve.listen(app.get('port'), function() {
  * Normalize a port into a number, string, or false.
  */
 
+//on connection listen to
+//emit or on two parts: Event is in a string
+//same way you would name a function 'game over' is var socket.emit('game over', callback function())
+// socket.on('game over', function())
+// socket.io
+// socket: means direct or private messages
+// io: means to the room/everybody
+// say something or listen for something
+
+// Client side angular, ng-button socket.emit('bingo!', function())
+// Server io.emit('gameover')
+
+// Namespace vs Room
+// Seperate your rooms by actual rooms with a slash
+// namespace /:id
+
+// Design it as if the server is lazy
+// Everything socket related comes from client
+
+
  io.on('connection', function (socket) {
      console.log('a user connected');
      socket.on('disconnect', function () {
