@@ -1,8 +1,11 @@
-app.controller("SplashController", ['$scope', '$http', function($scope, $http, BoardService){
+app.controller("SplashController", ['$scope', '$http', '$route', function($scope, $http, $route, BoardService){
    // no instance variables here....
 }]);
 
-app.controller("MainController", ['$scope', '$http', 'BoardsService', function ($scope, $http, BoardsService) {
+app.controller("MainController", ['$scope', '$http', '$route', 'BoardsService', function ($scope, $http, $route, BoardsService) {
+  $scope.reloadRoute = function () {
+    $route.reload();
+  };
   BoardsService.all().then(function (boards) {
     $scope.boards = boards.data;
   });
@@ -15,7 +18,6 @@ app.controller("MainController", ['$scope', '$http', 'BoardsService', function (
   $scope.addBoard = function () {
     var newBoard = $scope.board;
     BoardsService.addBoard(newBoard).then(function (stuff) {
-      console.log(stuff);
       BoardsService.all().then(function (boards) {
         $scope.boards = boards.data;
       });
@@ -24,14 +26,11 @@ app.controller("MainController", ['$scope', '$http', 'BoardsService', function (
   }
 }]);
 
-app.controller("BoardShowController", function($scope, BoardsService, $routeParams){
+app.controller("BoardShowController", function($scope, BoardsService, $routeParams, $route){
   the_id = $routeParams.id;
-  console.log("my params are "+the_id);
   BoardsService.getBoard(the_id).then(function(payload){
-    console.log("we are getting ONE board named: "+payload.data.post.text);
     $scope.singleBoard = payload.data;
   }, function(error){
-    console.log("an error occurred");
   });
 });
 
