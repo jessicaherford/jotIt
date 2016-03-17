@@ -21,6 +21,7 @@ router.get("/boards/:id", function(req,res){
 router.get("/boards/:id", function(req,res){
   Note.findOne({board_id: req.params.id}).then(function(payload){
     res.json(payload);
+    console.log('************');
     console.log(payload);
   });
 });
