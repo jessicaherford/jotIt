@@ -15,6 +15,7 @@ app.controller("MainController", ['$scope', '$http', 'BoardsService', function (
   $scope.addBoard = function () {
     var newBoard = $scope.board;
     BoardsService.addBoard(newBoard).then(function (stuff) {
+      console.log(stuff);
       BoardsService.all().then(function (boards) {
         $scope.boards = boards.data;
       });
