@@ -7,7 +7,6 @@ var Board = require('../models/board_model');
 
 router.get('/', function (req, res, next) {
   Board.find().then(function (boards) {
-    console.log(boards);
     res.json(boards);
   });
 });
@@ -15,7 +14,6 @@ router.get('/', function (req, res, next) {
 router.get("/:id", function(req,res){
   Board.findOne({_id: req.params.id}).then(function(payload){
     res.json(payload);
-    console.log(payload);
   });
 });
 
