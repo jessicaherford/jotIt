@@ -1,10 +1,11 @@
 <div class="boardContainer">
   <div class="row text-center">
-      <h3>The Large Modal</h3>
       <a href="/notes" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to open Modal</a>
   </div>
   <hr>
 </div>
+
+<h3>{{singleBoard.title}}</h3>
 
 <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -28,7 +29,6 @@
 <div class = 'noteContainer'>
   <div id="react-container"></div>
   <img class='noteBoard' src="http://www.2x3.pl/wp-content/uploads/2014/01/TS_CS__1300x900.jpg" alt="">
-  <h1 class='noteHeader'>:book's Board</h1>
 </div>
 <script>
   var socket = io();

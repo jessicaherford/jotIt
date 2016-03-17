@@ -7,9 +7,14 @@ var Board = require('../models/board_model');
 
 router.get('/', function (req, res, next) {
   Board.find().then(function (boards) {
-    console.log('************');
-    console.log(boards);
     res.json(boards);
+  });
+});
+
+router.get("/:id", function(req,res){
+  Board.findOne({_id: req.params.id}).then(function(payload){
+    res.json(payload);
+    console.log(payload);
   });
 });
 
@@ -17,6 +22,7 @@ router.post('/', function (req, res, next) {
   board = new Board({
     title: req.body.title
   });
+
 
   board.save(function () {
     res.json({success: true});

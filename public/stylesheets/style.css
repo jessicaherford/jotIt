@@ -136,6 +136,10 @@ div.note > textarea {
   height: 90vh;
 }
 
+h3{
+  text-align: center;
+}
+
 .boardButton{
   margin: 0 auto;
 }

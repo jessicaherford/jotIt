@@ -5,12 +5,13 @@ app.factory('BoardsService', ['$http', function ($http) {
     },
 
     getBoard: function (board_id) {
-      return $http.get('/boards/board_id'+board_id);
+      return $http.get('/boards/'+board_id);
     },
 
     addBoard: function (newBoard) {
       return $http.post('/boards', newBoard);
-    }
+    },
+
 
   }
 }])
