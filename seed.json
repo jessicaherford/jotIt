@@ -1,5 +1,5 @@
 {
 	"undefined": "localhost/boards_development",
 	"dev": "localhost/boards_development",
-	"prod": "localhost/PROD_DB_NAME"
+	"prod": "process.env.MONGOLAB_URI"
 }

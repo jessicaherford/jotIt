@@ -1,7 +1,11 @@
 // grab the mongoose module
 var mongoose = require('mongoose');
+// var databaseConnect = require('../config/db')
 var Schema = mongoose.Schema;
-mongoose.connect('mongodb://localhost/boards_development');
+
+// mongoose.connect('mongodb://localhost/boards_development');
+// mongoose.connect('mongodb://jess:jotit@ds015939.mlab.com:15939/jotit');
+
 
 // define our board model
 var boardSchema = new Schema({
