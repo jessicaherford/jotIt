@@ -37,18 +37,20 @@ if(env === 'development'){
   mongoose.connect('mongodb://jess:jotit@ds015939.mlab.com:15939/jotit')
 }
 
-
-
 app.use('/', routes);
-app.use('/users', users);
-app.use('/boards', boards);
-app.use('/notes', notes);
+app.use('/api', users);
+app.use('/api', boards);
+app.use('/api', notes);
 
 //CORS thingy
 app.use(function(req, res, next) {
  res.header("Access-Control-Allow-Origin", "*");
  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
  next();
+});
+
+app.use(function (req, res) {
+    res.sendfile(__dirname + '/views/index.html');
 });
 
 // catch 404 and forward to error handler

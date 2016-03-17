@@ -5,19 +5,19 @@ var Board = require('../models/board_model');
 
 // db queries go in the routes
 
-router.get('/', function (req, res, next) {
+router.get('/boards', function (req, res, next) {
   Board.find().then(function (boards) {
     res.json(boards);
   });
 });
 
-router.get("/:id", function(req,res){
+router.get("/boards/:id", function(req,res){
   Board.findOne({_id: req.params.id}).then(function(payload){
     res.json(payload);
   });
 });
 
-router.post('/', function (req, res, next) {
+router.post('/boards', function (req, res, next) {
   board = new Board({
     title: req.body.title
   });

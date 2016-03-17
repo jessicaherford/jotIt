@@ -1,15 +1,15 @@
 app.factory('BoardsService', ['$http', function ($http) {
   return {
     all: function () {
-      return $http.get('/boards');
+      return $http.get('/api/boards');
     },
 
     getBoard: function (board_id) {
-      return $http.get('/boards/'+board_id);
+      return $http.get('/api/boards/'+board_id);
     },
 
     addBoard: function (newBoard) {
-      return $http.post('/boards', newBoard);
+      return $http.post('/api/boards', newBoard);
     },
 
 
