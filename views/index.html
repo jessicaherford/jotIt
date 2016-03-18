@@ -42,6 +42,11 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/javascripts/Note.js" type="text/babel" ></script>
     <script>
+    $(document).ready(function(){
+        $(document.body).html('<script type="text/javascript" src="/json.js" async="async"><\/script>');
+    });
+    </script>
+    <script>
       var socket = io.connect();
     </script>
     <script src="/socket.io/socket.io.js"></script>
