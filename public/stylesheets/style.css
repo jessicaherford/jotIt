@@ -141,7 +141,8 @@ h3{
 }
 
 .boardButton{
-  margin: 0 auto;
+  margin-left: 580px;
+  margin-top: 50px;
 }
 
 .boardWell{
@@ -156,6 +157,11 @@ h3{
 
 .boardContainer{
   margin-left: 25px;
+}
+
+.splashButton{
+  text-decoration-color: white;
+  margin-left: 75px;
 }
 
 /*chat styles*/
