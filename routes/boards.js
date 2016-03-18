@@ -36,17 +36,8 @@ router.post('/boards', function (req, res, next) {
   board.save(function () {
     res.json({success: true});
   })
-
-  // Board.save(req.body).then(function () {
-  //   res.json({success: true});
-  // });
 });
 
-// router.get("/:id", function(req,res){
-//    Cat().where({id: req.params.id}).first().then(function(payload){
-//      res.json(payload);
-//    });
-// });
 
 
 
