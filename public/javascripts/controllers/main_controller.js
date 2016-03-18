@@ -48,7 +48,7 @@ app.controller("ChatController", function($scope) {
 
   $scope.addChat = function() {
     if ($scope.newChatMsg != "") {
-      var chat = $scope.formatChat("http://placehold.it/16x16",
+      var chat = $scope.formatChat("https://placehold.it/16x16",
                            "steve",
                            $scope.newChatMsg,
                            new Date());
