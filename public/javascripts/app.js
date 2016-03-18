@@ -14,7 +14,7 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '/partials/notes.html',
         controller: 'BoardShowController'
       })
-      .when('/boards/:id/chatroom', {
+      .when('/chatroom', {
         templateUrl: '/partials/chatroom.html',
         controller: 'ChatController'
       })
